@@ -41,9 +41,9 @@ if __name__ == '__main__':
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("добавить", add))
-    app.add_handler(CommandHandler("задачи", tasks))
-    app.add_handler(CommandHandler("завершить", complete))
+    app.add_handler(CommandHandler("add", add))
+    app.add_handler(CommandHandler("tasks", tasks))
+    app.add_handler(CommandHandler("complete", complete))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice_message))
 
     app.run_polling()
